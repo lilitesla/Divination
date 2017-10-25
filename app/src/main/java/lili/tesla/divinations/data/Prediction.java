@@ -21,4 +21,27 @@ public class Prediction {
         slogan = predSlogan;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setIndex_id(int index_id) {
+        this.index_id = index_id;
+    }
+
+    public void setCaption(String caption) {
+        this.caption = caption;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setChina_caption(String china_caption) {
+        this.china_caption = china_caption;
+    }
+
+    public void setSlogan(String slogan) {
+        this.slogan = slogan;
+    }
 }

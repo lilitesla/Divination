@@ -7,8 +7,10 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 
+import java.util.ArrayList;
+import java.util.List;
 
-
+import lili.tesla.divinations.data.AuditItem;
 import lili.tesla.divinations.data.Prediction;
 
 /**
@@ -41,7 +43,7 @@ public class DatabaseAccess {
         }
     }
 
-    private Prediction getPrediction(String[] predIndex) {
+    public Prediction getPrediction(String[] predIndex) {
         open();
         Cursor cursor = database.rawQuery("SELECT * FROM china_divination_table WHERE index_id=?", predIndex);
         cursor.moveToFirst();
@@ -52,6 +54,20 @@ public class DatabaseAccess {
         return result;
     }
 
+    public List<AuditItem> getAuditItems() {
+        open();
+        String[] text = {};
 
+        Cursor cursor = database.rawQuery("SELECT * FROM audit ORDER BY id DESC", text);
+        List<AuditItem> auditItems = new ArrayList<>();
+        cursor.moveToFirst();
+        while (cursor.moveToNext()) {
+           AuditItem auditItem = new AuditItem(cursor.getInt(0), cursor.getString(1), cursor.getInt(2));
+           auditItems.add(auditItem);
+        }
+        cursor.close();
+        close();
+        return auditItems;
+    }
 
 }
