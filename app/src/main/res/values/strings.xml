@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Divinations</string>
+    <string name="desc_caption">Гадание</string>
+    <string name="desc_text">
+        Текст текст текст текст текст текст \n
+        текст текст текст текст текст текст \n
+        текст текст текст текст текст текст \n
+        текст текст текст текст текст текст \n
+        текст текст текст текст текст текст
+    </string>
+    <string name="startGame">Начать гадание</string>
+    <string name="showHistory">История</string>
 </resources>
