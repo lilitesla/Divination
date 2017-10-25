@@ -6,5 +6,5 @@ package lili.tesla.divinations.presentation.screen.main.view;
 
 public interface MainView {
     void startGameScreen();
-    void showHistory();
+    void showHistoryScreen();
 }

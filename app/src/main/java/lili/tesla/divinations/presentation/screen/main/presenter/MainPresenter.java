@@ -13,7 +13,7 @@ public class MainPresenter extends BasePresenter<MainView>{
         mView.startGameScreen();
     }
 
-    public void showHistory() {
-        mView.showHistory();
+    public void showHistoryScreen() {
+        mView.showHistoryScreen();
     }
 }

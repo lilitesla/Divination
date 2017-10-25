@@ -10,4 +10,7 @@
     </string>
     <string name="startGame">Начать гадание</string>
     <string name="showHistory">История</string>
+    <string name="startGameAgain">Ещё раз</string>
+    <string name="goToMain">На главную</string>
+    <string name="showPrediction">Посмотреть предсказание</string>
 </resources>

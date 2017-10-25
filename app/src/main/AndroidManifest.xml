@@ -16,6 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".presentation.screen.history.view.HistoryActivity" />
+        <activity android:name=".presentation.screen.divination.view.DivinationActivity" />
+        <activity android:name=".presentation.screen.prediction.view.PredictionActivity"></activity>
     </application>
 
 </manifest>
