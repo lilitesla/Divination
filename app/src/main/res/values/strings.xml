@@ -1,16 +1,18 @@
 <resources>
     <string name="app_name">Divinations</string>
-    <string name="desc_caption">Гадание</string>
+    <string name="desc_caption">Книга перемен</string>
+    <string name="quote">Если бы я мог продлить свою жизнь, то\n
+        пятьдесят лет отдал бы изучению Книги Перемен, \n
+        и тогда смог бы не совершать ошибок.\n Конфуций</string>
     <string name="desc_text">
-        Текст текст текст текст текст текст \n
-        текст текст текст текст текст текст \n
-        текст текст текст текст текст текст \n
-        текст текст текст текст текст текст \n
-        текст текст текст текст текст текст
+        Гадая по Книге Перемен, Вы не только сможете определить развернутую характеристику Вашей жизненной ситуации, но и получите конкретную рекомендацию. Если Вы будете действовать согласно ей, то сможете прийти к оптимальному решению Ваших проблем и даже к самому благоприятному для Вас развитию событий.
     </string>
     <string name="startGame">Начать гадание</string>
     <string name="showHistory">История</string>
     <string name="startGameAgain">Ещё раз</string>
     <string name="goToMain">На главную</string>
     <string name="showPrediction">Посмотреть предсказание</string>
+    <string name="toss_a_coin">Подбросить монетку</string>
+
+    <dimen name="horizontal_vertical_margins">16dp</dimen>
 </resources>

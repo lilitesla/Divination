@@ -6,7 +6,14 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
+    android:layout_margin="@dimen/horizontal_vertical_margins"
     tools:context="lili.tesla.divinations.presentation.screen.divination.view.DivinationActivity">
+
+    <Button
+        android:id="@+id/button_toss_a_coin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/toss_a_coin"/>
 
     <Button
         android:id="@+id/button_show_prediction"

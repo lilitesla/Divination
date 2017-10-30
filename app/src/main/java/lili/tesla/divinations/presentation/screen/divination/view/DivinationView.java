@@ -6,4 +6,8 @@ package lili.tesla.divinations.presentation.screen.divination.view;
 
 public interface DivinationView {
     void showPredictionScreen();
+    void showButtonTossCount(boolean flag);
+    void showButtonPredictionScreen(boolean flag);
+    void showLine(int randomNum, int orderNum);
+
 }

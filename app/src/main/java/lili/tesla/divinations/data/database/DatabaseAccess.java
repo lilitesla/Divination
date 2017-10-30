@@ -22,7 +22,7 @@ public class DatabaseAccess {
     private SQLiteDatabase database;
     private static DatabaseAccess instance;
 
-    private DatabaseAccess(Context context) {
+    public DatabaseAccess(Context context) {
         this.openHelper = new DatabaseOpenHelper(context);
     }
 
@@ -47,8 +47,10 @@ public class DatabaseAccess {
         open();
         Cursor cursor = database.rawQuery("SELECT * FROM china_divination_table WHERE index_id=?", predIndex);
         cursor.moveToFirst();
-        Prediction result = new Prediction(cursor.getInt(0), cursor.getInt(1), cursor.getString(2),
-                cursor.getString(3), cursor.getString(4), cursor.getString(5));
+        Prediction result = new Prediction(cursor.getInt(0),
+                cursor.getString(1), cursor.getString(2),
+                cursor.getString(3), cursor.getString(4),
+                cursor.getString(5));
         cursor.close();
         close();
         return result;

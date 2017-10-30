@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
+    android:layout_margin="@dimen/horizontal_vertical_margins"
     tools:context="lili.tesla.divinations.presentation.screen.main.view.MainActivity">
 
 
@@ -14,13 +15,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/desc_caption"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:textSize="20dp"
+        android:layout_marginBottom="20dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/quote"
+        android:gravity="right"
+        android:textStyle="italic"
+        android:layout_marginBottom="20dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/desc_text"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:layout_marginBottom="20dp"/>
 
     <Button
         android:id="@+id/button_start"

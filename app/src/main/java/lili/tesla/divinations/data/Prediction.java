@@ -6,13 +6,13 @@ package lili.tesla.divinations.data;
 
 public class Prediction {
     private int id;
-    private int index_id;
+    private String index_id;
     private String caption;
     private String description;
     private String china_caption;
     private String slogan;
 
-    public Prediction(int predId, int predIndex, String predCaption, String predDescription, String predChinaCaption, String predSlogan) {
+    public Prediction(int predId, String predIndex, String predCaption, String predDescription, String predChinaCaption, String predSlogan) {
         id = predId;
         index_id = predIndex;
         caption = predCaption;
@@ -25,7 +25,7 @@ public class Prediction {
         this.id = id;
     }
 
-    public void setIndex_id(int index_id) {
+    public void setIndex_id(String index_id) {
         this.index_id = index_id;
     }
 
@@ -43,5 +43,21 @@ public class Prediction {
 
     public void setSlogan(String slogan) {
         this.slogan = slogan;
+    }
+
+    public String getCaption() {
+        return caption;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getChina_caption() {
+        return china_caption;
+    }
+
+    public String getSlogan() {
+        return slogan;
     }
 }
