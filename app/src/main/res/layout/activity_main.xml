@@ -1,28 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
     android:layout_margin="@dimen/horizontal_vertical_margins"
     tools:context="lili.tesla.divinations.presentation.screen.main.view.MainActivity">
 
 
 
     <TextView
+        android:id="@+id/textview_caption"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/desc_caption"
         android:gravity="center"
+        android:layout_centerHorizontal="true"
         android:textSize="20dp"
         android:layout_marginBottom="20dp"
         android:textStyle="bold"/>
 
     <TextView
+        android:id="@+id/textview_slogan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/textview_caption"
         android:text="@string/quote"
         android:gravity="right"
         android:textStyle="italic"
@@ -32,21 +35,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/desc_text"
-        android:gravity="center"
+
+        android:layout_below="@id/textview_slogan"
+        android:layout_above="@+id/button_start"
         android:layout_marginBottom="20dp"/>
 
     <Button
-        android:id="@+id/button_start"
+        android:id="@id/button_start"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/startGame"/>
+        android:text="@string/startGame"
+        android:layout_above="@+id/button_history"/>
 
     <Button
-        android:id="@+id/button_history"
+        android:id="@id/button_history"
+        android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/showHistory"/>
 
 
 
-</LinearLayout>
+</RelativeLayout>

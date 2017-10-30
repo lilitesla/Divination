@@ -7,46 +7,53 @@
     android:layout_margin="@dimen/horizontal_vertical_margins"
     tools:context="lili.tesla.divinations.presentation.screen.prediction.view.PredictionActivity">
 
+
     <TextView
         android:id="@+id/textview_prediction_caption"
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:textSize="20dp"
         android:textStyle="bold"
+        android:text="Заголовок"
+        />
+
+    <TextView
+        android:id="@+id/textview_prediction_slogan"
+        android:layout_below="@id/textview_prediction_caption"
+
+        android:gravity="right"
+        android:textStyle="italic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="слоган"
         />
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:id="@+id/textview_prediction_slogan"
-            android:gravity="right"
-            android:textStyle="italic"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
+        android:layout_height="match_parent"
+        android:layout_below="@id/textview_prediction_slogan"
+        android:layout_above="@+id/button_start_again">
 
         <TextView
             android:id="@+id/textview_prediction_description"
             android:gravity="left"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
+            android:layout_height="match_parent"
+            android:text="Текст текст текст"/>
 
     </ScrollView>
 
-
-
     <Button
-        android:id="@+id/button_start_again"
+        android:id="@id/button_start_again"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/button_back_to_main"
         android:text="@string/startGameAgain"/>
 
     <Button
-        android:id="@+id/button_back_to_main"
+        android:id="@id/button_back_to_main"
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
