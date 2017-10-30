@@ -7,12 +7,14 @@ package lili.tesla.divinations.data;
 public class AuditItem {
     private int id;
     private String date;
-    private int predictionIndex;
+    private String predictionIndex;
+    private String predictionCaption;
 
-    public AuditItem(int auditId, String auditDate, int auditPredictionIndex) {
+    public AuditItem(int auditId, String auditDate, String auditPredictionIndex, String auditPredictionCaption) {
         id = auditId;
         date = auditDate;
         predictionIndex = auditPredictionIndex;
+        predictionCaption = auditPredictionCaption;
     }
 
     public int getId() {
@@ -31,11 +33,19 @@ public class AuditItem {
         this.date = date;
     }
 
-    public int getPredictionIndex() {
+    public String getPredictionIndex() {
         return predictionIndex;
     }
 
-    public void setPredictionIndex(int predictionIndex) {
+    public void setPredictionIndex(String predictionIndex) {
         this.predictionIndex = predictionIndex;
+    }
+
+    public String getPredictionCaption() {
+        return predictionCaption;
+    }
+
+    public void setPredictionCaption(String predictionCaption) {
+        this.predictionCaption = predictionCaption;
     }
 }

@@ -60,11 +60,12 @@ public class DatabaseAccess {
         open();
         String[] text = {};
 
-        Cursor cursor = database.rawQuery("SELECT * FROM audit ORDER BY id DESC", text);
+        Cursor cursor = database.rawQuery("SELECT a.*, cd.china_caption, cd.caption FROM audit a, china_divination_table cd WHERE cd.index_id=a.numeric_id ORDER BY a.id DESC", text);
         List<AuditItem> auditItems = new ArrayList<>();
         cursor.moveToFirst();
         while (cursor.moveToNext()) {
-           AuditItem auditItem = new AuditItem(cursor.getInt(0), cursor.getString(1), cursor.getInt(2));
+           AuditItem auditItem = new AuditItem(cursor.getInt(0), cursor.getString(1), cursor.getString(2),
+                   cursor.getString(3) + ". " + cursor.getString(4));
            auditItems.add(auditItem);
         }
         cursor.close();
