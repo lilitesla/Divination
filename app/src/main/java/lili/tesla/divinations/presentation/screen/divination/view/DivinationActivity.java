@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import butterknife.BindView;
@@ -76,7 +77,7 @@ public class DivinationActivity extends BaseActivity implements DivinationView {
     public void showButtonPredictionScreen(boolean flag) {
         if (flag) {
             mButtonShowPrediction.setVisibility(View.VISIBLE);
-            //Toast.makeText(this, "Индекс: " + mPresenter.getPredictionIndex(), Toast.LENGTH_SHORT).show();
+            // Toast.makeText(this, "Индекс: " + mPresenter.getPredictionIndex(), Toast.LENGTH_SHORT).show();
         } else {
             mButtonShowPrediction.setVisibility(View.GONE);
         }
@@ -85,7 +86,40 @@ public class DivinationActivity extends BaseActivity implements DivinationView {
     @Override
     public void showLine(int randomNum, int orderNum) {
         //Toast.makeText(this, "Получили " + orderNum + " число: " + randomNum, Toast.LENGTH_SHORT).show();
-        // TODO: 30.10.2017 show line
+        ImageView imageView = (ImageView) findViewById(R.id.imageview_1);
+
+        switch(orderNum) {
+            case 1:
+                imageView = (ImageView) findViewById(R.id.imageview_1);
+                break;
+            case 2:
+                imageView = (ImageView) findViewById(R.id.imageview_2);
+                break;
+            case 3:
+                imageView = (ImageView) findViewById(R.id.imageview_3);
+                break;
+            case 4:
+                imageView = (ImageView) findViewById(R.id.imageview_4);
+                break;
+            case 5:
+                imageView = (ImageView) findViewById(R.id.imageview_5);
+                break;
+            case 6:
+                imageView = (ImageView) findViewById(R.id.imageview_6);
+                break;
+            default:
+                break;
+        }
+
+        imageView.setVisibility(View.VISIBLE);
+
+        if (randomNum == 1) {
+            imageView.setBackgroundResource(R.drawable.dotpath);
+        } else {
+            imageView.setBackgroundResource(R.drawable.rectanglepath);
+        }
+
+
     }
 
 

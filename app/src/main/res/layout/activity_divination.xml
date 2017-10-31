@@ -7,6 +7,58 @@
     android:layout_margin="@dimen/horizontal_vertical_margins"
     tools:context="lili.tesla.divinations.presentation.screen.divination.view.DivinationActivity">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginHorizontal="100dp"
+        android:layout_marginTop="90dp"
+        android:id="@+id/imageview_6"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:layout_below="@id/imageview_6"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginHorizontal="100dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/imageview_5"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:layout_below="@id/imageview_5"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginHorizontal="100dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/imageview_4"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:layout_below="@id/imageview_4"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginHorizontal="100dp"
+        android:layout_marginTop="30dp"
+        android:id="@+id/imageview_3"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:layout_below="@id/imageview_3"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginHorizontal="100dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/imageview_2"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:layout_below="@id/imageview_2"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginHorizontal="100dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/imageview_1"
+        android:visibility="invisible"/>
 
 
     <Button
