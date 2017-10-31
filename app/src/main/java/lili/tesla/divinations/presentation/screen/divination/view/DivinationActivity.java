@@ -76,7 +76,7 @@ public class DivinationActivity extends BaseActivity implements DivinationView {
     public void showButtonPredictionScreen(boolean flag) {
         if (flag) {
             mButtonShowPrediction.setVisibility(View.VISIBLE);
-            Toast.makeText(this, "Индекс: " + mPresenter.getPredictionIndex(), Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "Индекс: " + mPresenter.getPredictionIndex(), Toast.LENGTH_SHORT).show();
         } else {
             mButtonShowPrediction.setVisibility(View.GONE);
         }
@@ -84,7 +84,7 @@ public class DivinationActivity extends BaseActivity implements DivinationView {
 
     @Override
     public void showLine(int randomNum, int orderNum) {
-        Toast.makeText(this, "Получили " + orderNum + " число: " + randomNum, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "Получили " + orderNum + " число: " + randomNum, Toast.LENGTH_SHORT).show();
         // TODO: 30.10.2017 show line
     }
 
