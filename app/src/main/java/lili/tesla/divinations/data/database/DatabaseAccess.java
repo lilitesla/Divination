@@ -7,7 +7,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import lili.tesla.divinations.data.AuditItem;
@@ -62,15 +64,30 @@ public class DatabaseAccess {
 
         Cursor cursor = database.rawQuery("SELECT a.*, cd.china_caption, cd.caption FROM audit a, china_divination_table cd WHERE cd.index_id=a.numeric_id ORDER BY a.id DESC", text);
         List<AuditItem> auditItems = new ArrayList<>();
-        cursor.moveToFirst();
-        while (cursor.moveToNext()) {
-           AuditItem auditItem = new AuditItem(cursor.getInt(0), cursor.getString(1), cursor.getString(2),
-                   cursor.getString(3) + ". " + cursor.getString(4));
-           auditItems.add(auditItem);
+        if (cursor.getCount() > 0) {
+            cursor.moveToFirst();
+            AuditItem auditItem = new AuditItem(cursor.getInt(0), cursor.getString(1), cursor.getString(2),
+                    cursor.getString(3) + ". " + cursor.getString(4));
+            auditItems.add(auditItem);
+
+            while (cursor.moveToNext()) {
+                auditItem = new AuditItem(cursor.getInt(0), cursor.getString(1), cursor.getString(2),
+                        cursor.getString(3) + ". " + cursor.getString(4));
+                auditItems.add(auditItem);
+            }
         }
         cursor.close();
         close();
         return auditItems;
+    }
+
+    public void addAuditItem(String predictionIndex) {
+        open();
+
+        Date dateNow = new Date();
+        SimpleDateFormat formatForDateNow = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss");
+
+        database.execSQL("INSERT INTO audit (date, numeric_id) VALUES (\"" + formatForDateNow.format(dateNow) + "\", \"" + predictionIndex + "\"); COMMIT;");
     }
 
 }

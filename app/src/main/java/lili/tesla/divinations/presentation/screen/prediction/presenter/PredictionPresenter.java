@@ -26,6 +26,8 @@ public class PredictionPresenter extends BasePresenter<PredictionView> {
         str[0] = predictionIndex;
         Prediction prediction = App.databaseAccess.getPrediction(str);
 
+        App.databaseAccess.addAuditItem(predictionIndex);
+
         mView.showPrediction(prediction);
     }
 
